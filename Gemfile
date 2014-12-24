@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.3'  #Due to a rails bug, Ruby 2.x won't compile the CSS and JS manifest files.
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,11 +14,12 @@ gem 'russian', '~> 0.6.0'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  #gem 'sass-rails',   '~> 3.2.3'  #can't use SASS and LESS at the same time!
+  gem "less-rails"
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platform => :ruby
+  gem 'therubyracer', '0.12.1', platforms: :ruby
 
   gem 'uglifier', '>= 1.0.3'
 
