@@ -4,7 +4,7 @@ gem 'rails', '3.2.3'  #Due to a rails bug, Ruby 2.x won't compile the CSS and JS
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'thin'
 gem 'sqlite3'
 
 gem 'rmagick'
@@ -25,6 +25,12 @@ group :assets do
 
   gem 'twitter-bootstrap-rails'
   
+end
+
+group :development do
+  gem 'better_errors', '0.3.2'
+  gem 'binding_of_caller', '>= 0.6.8'
+  gem 'meta_request'
 end
 
 gem 'jquery-rails'
