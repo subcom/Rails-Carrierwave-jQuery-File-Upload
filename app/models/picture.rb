@@ -28,4 +28,13 @@ class Picture < ActiveRecord::Base
     FileUtils.rm(current_version)
     FileUtils.cp(large_version, current_version)
   end
+
+  def show_description
+    if description.blank?
+      "(No description)"
+    else
+      description
+    end
+  end
+
 end
